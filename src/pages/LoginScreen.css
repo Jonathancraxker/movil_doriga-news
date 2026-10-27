@@ -1,0 +1,45 @@
+.login-content {
+  --background: var(--ion-background-color);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.login-title {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.login-subtitle {
+  margin: 0 0 28px;
+  text-align: center;
+  color: var(--ion-color-medium);
+}
+
+.login-input {
+  margin-bottom: 14px;
+  --border-radius: 12px;
+  --background: var(--ion-color-light);
+  --padding-start: 14px;
+}
+
+.login-error {
+  margin: 4px 0 12px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-button {
+  margin-top: 12px;
+  --border-radius: 12px;
+  height: 48px;
+}

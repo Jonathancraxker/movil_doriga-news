@@ -1,0 +1,7 @@
+{
+  "name": "doriga-news-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
