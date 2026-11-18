@@ -1,0 +1,29 @@
+name: CI - Pruebas Automatizadas DorigaNews
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-y-validacion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar entorno Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 3. Instalar dependencias del proyecto
+        run: npm install
+
+      - name: 4. Verificar compilación TypeScript
+        run: npx tsc --noEmit
+
+      - name: 5. Ejecutar pruebas unitarias y de integración (Vitest)
+        run: npx vitest run

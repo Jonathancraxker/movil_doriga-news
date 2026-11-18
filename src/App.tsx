@@ -4,7 +4,10 @@ import { IonReactRouter } from '@ionic/react-router';
 import LoginScreen from './pages/LoginScreen';
 import HomeScreen from './pages/HomeScreen';
 import CreateNewsScreen from './pages/CreateNewsScreen';
-
+import NewsDetailScreen from './pages/NewsDetailScreen';
+import RegisterUserScreen from './pages/RegisterUserScreen';
+import SupportChatScreen from './pages/SupportChatScreen';
+import SupportListScreen from './pages/SupportListScreen';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -46,6 +49,10 @@ const App: React.FC = () => (
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/home" element={<HomeScreen />} />
         <Route path="/crear-noticia" element={<CreateNewsScreen />} />
+        <Route path="/noticia/:id" element={<NewsDetailScreen />} />
+        <Route path="/registrar-usuario" element={<RegisterUserScreen />} />
+        <Route path="/soporte" element={<SupportListScreen />} />
+        <Route path="/soporte/chat/:id" element={<SupportChatScreen />} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
