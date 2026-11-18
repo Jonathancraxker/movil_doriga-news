@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: 3. Instalar dependencias del proyecto
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: 4. Verificar compilación TypeScript
         run: npx tsc --noEmit
